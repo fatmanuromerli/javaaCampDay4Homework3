@@ -7,7 +7,7 @@ import day4Homework3.abstracts.PlayerService;
 import day4Homework3.abstracts.PlayerCheckService;
 import day4Homework3.abstracts.GameService;
 import day4Homework3.abstracts.SaleService;
-import day4Homework3.adapters.MernisIleEdevletSimülasyonu;
+import day4Homework3.adapters.MernisIleEdevletSimÃ¼lasyonu;
 import day4Homework3.concrete.CampaignManager;
 import day4Homework3.concrete.GameManager;
 import day4Homework3.concrete.PlayerManager;
@@ -23,15 +23,15 @@ import day4Homework3.entities.Sales;
 public class Main {
 
 	public static void main(String[] args) {
-		BaseManager playerManager=new PlayerManager(new MernisIleEdevletSimülasyonu());
-		playerManager.add(new Player(1,"Fatmanur", "Ömerli", "51208450500",LocalDate.of(2001, 4, 23)));
+		BaseManager playerManager=new PlayerManager(new MernisIleEdevletSimÃ¼lasyonu());
+		playerManager.add(new Player(1,"Fatmanur", "Ã–merli", "686820845586",LocalDate.of(2001, 4, 23)));// gerÃ§ek tc gerekir
 		
 		Player player = new Player();
 		player.setFirstName("Fatmanur");
-		player.setLastName("Ömerli");
+		player.setLastName("Ã–merli");
 		
 		Campaigns campaign = new Campaigns();
-		campaign.setCampaignName("Bahar kampanyası");
+		campaign.setCampaignName("Bahar kampanyasÃ½");
 		campaign.setRaise(30);
 		
 		Game game = new Game();
@@ -48,7 +48,7 @@ public class Main {
 		campaignManager.add(campaign);
 		campaignManager.delete(campaign);
 		
-		SaleManager saleManager = new SaleManager();// bu kısmı ayrı yazmamın sebebi BaseManager dizisi içinde 3 kez çıktı veriyor
+		SaleManager saleManager = new SaleManager();// bu kÃ½smÃ½ ayrÃ½ yazmamÃ½n sebebi BaseManager dizisi iÃ§inde 3 kez Ã§Ã½ktÃ½ veriyor
 		saleManager.salesAdd(player, game);
 		saleManager.sales(player, game);
 		
